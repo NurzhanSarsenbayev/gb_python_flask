@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+    <img src="{{ url_for('static', filename='img/pants.jpg') }}" alt="There should be an image of our pants">
+    <br>
+    Our Pants
+    <ul>
+        {% for pant in pants %}
+            <li>{{ pant }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

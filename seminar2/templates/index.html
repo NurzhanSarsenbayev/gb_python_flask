@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+	{{ title }}
+{% endblock %}
+{% block content %}
+    <h2>Task 1</h2>
+        <a>Introduce yourself</a>
+    <form action="{{ url_for('submit') }}" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="submit" value="Press me">
+    </form>
+    <h2>Task 2</h2>
+    <a href="{{ url_for('img_page') }}">Go to image page</a>
+    <h2>Task 3</h2>
+    <a href="{{ url_for('login') }}">Go to login page</a>
+    <h2>Task 4</h2>
+    <a href="{{ url_for('word_count') }}">Go to word count page</a>
+    <h2>Task 5</h2>
+    <a href="{{ url_for('basic_math') }}">Go to math page</a>
+    <h2>Task 6</h2>
+    <a href="{{ url_for('check_age')}}">Go to check age page</a>
+    <h2>Task 7</h2>
+    <a href="{{ url_for('square_num') }}">Go to square function page</a>
+    <h2>Task 8</h2>
+    <a href=""></a>
+    <h2>Task 9</h2>
+    <a href=""></a>
+{% endblock %}

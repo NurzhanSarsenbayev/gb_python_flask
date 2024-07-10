@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    My name is {{ name }}<br>
+    This is a sample pic!<br>
+    <img src="  {{ url_for ('static', filename= 'img/test_pic.jpg') }}" alt="Test PICTURE">
+{% endblock %}
+
+exte

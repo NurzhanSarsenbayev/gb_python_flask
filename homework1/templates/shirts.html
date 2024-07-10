@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%block title%}
+{{title}}
+{%endblock%}
+{%block content%}
+<img src="{{ url_for('static', filename='img/shirts.jpg') }}" alt="Image of our shirts">
+<br>
+Our shirts
+<ul>
+    {% for shirt in shirts%}
+        <li>{{shirt}}</li>
+    {%endfor%}
+</ul>
+{%endblock%}

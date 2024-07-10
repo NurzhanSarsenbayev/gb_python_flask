@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+	{{ title }}
+{% endblock %}
+{% block content %}
+    <form method="post">
+        <input type="text" name="number_a" placeholder="Enter your first number">
+        <input type="text" name="math_operation" placeholder="What operation you want to use?">
+        <input type="text" name="number_b" placeholder="Enter your second number">
+    <button>Submit</button>
+    </form>
+{% endblock %}

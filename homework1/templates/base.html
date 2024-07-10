@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1, shrink-to-fit=no">
+    <title>
+        {% block title %}
+        My site
+        {% endblock %}
+    </title>
+</head>
+<body>
+<div class="container-fluid">
+
+    <h1><a href="/" class="nav-link">My Homework</a></h1>
+    {% block content %}
+    If you follow following links, you can look at our inventory
+    <ul class="nav nav-pills justify-content-end align-items-end">
+        <li class="nav-item"><a href="./coats/"
+                                class="nav-link">Coats</a></li>
+        <li class="nav-item"><a href="./shirts/"
+                                class="nav-link">Shirts</a></li>
+        <li class="nav-item"><a href="./pants/"
+                                class="nav-link">Pants</a></li>
+    </ul>
+    {% endblock %}
+    <div class="row fixed-bottom modal-footer">
+        <p>Copyright &copy;</p>
+    </div>
+</div>
+</body>
+</html>

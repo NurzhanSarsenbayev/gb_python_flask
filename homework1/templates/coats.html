@@ -1,0 +1,22 @@
+{%extends "base.html" %}
+
+{%block title%}
+{{title}}
+{%endblock%}
+
+{% block content %}
+<img src="{{ url_for('static', filename='img/coats.jpg') }}" alt="There should be an image of our coats">
+<br>
+Our coats
+<ul>
+    {% for coat in coats%}
+        {% for key,value in coat.items()%}
+            {% if key == "color"%}
+                {% for color in value%}
+                    <li>{{color}}</li>
+                {%endfor%}
+            {%endif%}
+        {%endfor%}
+    {%endfor%}
+</ul>
+{% endblock %}

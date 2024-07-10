@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{%block title%}
+{{ title }}
+{%endblock%}
+
+{% block content %}
+<div class = 'row'>
+    <p class="col-12"> We didn't find page: {{url}}.<br>
+        <a href="{{ url_for('base') }}">Try to return to base</a>
+    </p>
+</div>
+{%endblock%}

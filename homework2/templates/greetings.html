@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+    <h1>Greetings</h1>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ mail }}</p>
+    <br>
+    Do you want to leave?
+    <form method="post">
+        <input type="submit" value="Leave">
+    </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}
+	Image Page
+{% endblock %}
+{% block content %}
+   <img src="{{ url_for('static', filename='img/test_pic.jpg') }}" class="col-12 col-md-6 img-fluid rounded-circle" alt="Just some beach">
+    <a href="{{ url_for('upload') }}">Here you can upload your image</a>
+{% endblock %}
