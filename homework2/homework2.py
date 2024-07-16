@@ -31,7 +31,7 @@ def greetings():
         'mail' : request.cookies.get('mail'),
     }
     if request.method == 'POST':
-        resp = make_response(redirect(url_for('home')))
+        resp = make_response(redirect(url_for('cookie_page')))
         resp.set_cookie('name', '', expires=0)
         resp.set_cookie('mail', '', expires=0)
         return resp
