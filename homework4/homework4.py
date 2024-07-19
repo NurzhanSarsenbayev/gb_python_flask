@@ -9,13 +9,7 @@ import aiohttp
 import requests
 import time
 
-urls = [
-    'https://example.com/image1.jpg',
-    'https://example.com/image2.png',
-    'https://example.com/image3.gif',
-    'https://example.com/image4.bmp',
-    'https://example.com/image5.svg',
-]
+
 start_time = time.time()
 def get_filename_from_url(url, suffix=''):
     parsed_url = urlparse(url)
