@@ -15,12 +15,12 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template('main.html')
+    return render_template('index.html')
 
 
 @app.route('/home/')
 def home():
-    return render_template('main.html')
+    return render_template('index.html')
 
 
 @app.route('/register/', methods=['GET', 'POST'])

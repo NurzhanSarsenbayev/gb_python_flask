@@ -15,7 +15,7 @@ def db_init():
 
 @app.route('/')
 def index():
-    return render_template('main.html')
+    return render_template('index.html')
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()

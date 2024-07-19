@@ -1,3 +1,4 @@
+import argparse
 import os
 import threading
 from multiprocessing import Process
@@ -67,11 +68,30 @@ async def async_function(suffix='unknown', *urls):
     print(f'Finished {suffix} async downloads in {time.time() - start_time:.2f} seconds')
 
 
-def main():
+def main(urls):
     global start_time
     thread_function('thread', *urls)
     multiprocess_function('process', *urls)
     loop = asyncio.get_event_loop()
     loop.run_until_complete(async_function('async', *urls))
+
+
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description='Download images from URLs.')
+    parser.add_argument('urls', nargs='*', help='List of image URLs to download')
+
+    args = parser.parse_args()
+
+    # Provide default URLs for IDE testing
+    default_urls = [
+        'https://example.com/image1.jpg',
+        'https://example.com/image2.png',
+        'https://example.com/image3.gif',
+        'https://example.com/image4.bmp',
+        'https://example.com/image5.svg',
+    ]
+
+    # Use URLs from command line or default URLs
+    urls = args.urls if args.urls else default_urls
+
+    main(urls)
